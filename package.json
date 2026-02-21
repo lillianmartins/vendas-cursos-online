@@ -1,0 +1,21 @@
+{
+  "name": "vendas-cursos-online",
+  "version": "1.0.0",
+  "description": "Site para vendas de cursos online onde os usuários podem visualizar os cursos disponíveis e acessar detalhes em uma página dedicada para cada um deles.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lillianmartins/vendas-cursos-online.git"
+  },
+  "author": "Lillian Martins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lillianmartins/vendas-cursos-online/issues"
+  },
+  "homepage": "https://github.com/lillianmartins/vendas-cursos-online#readme"
+}
