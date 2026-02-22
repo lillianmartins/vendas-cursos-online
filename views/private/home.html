@@ -12,7 +12,7 @@
 
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/home.html">Cursos Online</a>
+        <h3 class="navbar-brand">Cursos Online</h3>
         
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -23,13 +23,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Meus Cursos</a>
+                    <a class="nav-link active" aria-current="page" href="home.html">Cursos</a>
                 </li>
             </ul>
 
             <form class="d-flex" role="search">
                 <input class="form-control me-0" type="search" placeholder="O que você procura?" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Buscar</button>
+                <button class="btn" type="submit">Buscar</button>
             </form>
 
             <ul class="navbar-nav">
@@ -40,6 +40,41 @@
         </div>
     </div>
 </nav>
+
+<div class="container my-5">
+  <h1 class="text-center mb-5" style="color: var(--purple-main);">Cursos Disponíveis</h1>
+
+  <div class="row g-4" id="courses-container">
+    <!-- Os cards serão inseridos aqui via JavaScript -->
+  </div>
+</div>
+
+<script type="module">
+  import { courses } from '/data.js';
+
+  const container = document.getElementById('courses-container');
+
+  courses.forEach(course => {
+    const card = `
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="course-card">
+          <div class="card-body">
+            <h5 class="card-title">${course.name}</h5>
+            <p class="card-text">
+              <strong>Início:</strong> ${course.startDate}<br>
+              <strong>Duração:</strong> ${course.duration}<br>
+              <strong>Preço:</strong> R$ ${course.price.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
+            </p>
+            <a href="/details.html?id=${course.id}" class="btn details-btn w-100">
+              Ver detalhes
+            </a>
+          </div>
+        </div>
+      </div>
+    `;
+    container.innerHTML += card;
+  });
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

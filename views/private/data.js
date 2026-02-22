@@ -1,4 +1,110 @@
-const USER = {
-    user: "admin",
-    passord: "123456"
-}
+export const USER = {
+  user: "admin",
+  passord: "123456",
+};
+
+export const courses = [
+  {
+    id: 1,
+    name: "Node.js do Zero ao Avançado",
+    startDate: "10/03/2026",
+    duration: "40 horas",
+    price: 500,
+    description:
+      "Aprenda a criar APIs completas com Node.js, Express e integração com banco de dados.",
+    workload: "40h",
+    instructor: "João Silva",
+    level: "Iniciante",
+    seatsAvailable: 20,
+  },
+  {
+    id: 2,
+    name: "JavaScript Moderno (ES6+)",
+    startDate: "15/03/2026",
+    duration: "30 horas",
+    price: 450,
+    description:
+      "Domine arrow functions, promises, async/await, módulos e boas práticas.",
+    workload: "30h",
+    instructor: "Maria Souza",
+    level: "Iniciante",
+    seatsAvailable: 25,
+  },
+  {
+    id: 3,
+    name: "HTML5 e CSS3 Responsivo",
+    startDate: "20/03/2026",
+    duration: "25 horas",
+    price: 300,
+    description:
+      "Crie layouts modernos e responsivos utilizando Flexbox e Grid.",
+    workload: "25h",
+    instructor: "Carlos Mendes",
+    level: "Iniciante",
+    seatsAvailable: 30,
+  },
+  {
+    id: 4,
+    name: "React.js para Aplicações Web",
+    startDate: "25/03/2026",
+    duration: "35 horas",
+    price: 550,
+    description:
+      "Desenvolva interfaces dinâmicas com componentes, hooks e consumo de APIs.",
+    workload: "35h",
+    instructor: "Ana Lima",
+    level: "Intermediário",
+    seatsAvailable: 18,
+  },
+  {
+    id: 5,
+    name: "Banco de Dados com MySQL",
+    startDate: "01/04/2026",
+    duration: "30 horas",
+    price: 400,
+    description:
+      "Modelagem de dados, SQL avançado e integração com aplicações web.",
+    workload: "30h",
+    instructor: "Ricardo Alves",
+    level: "Intermediário",
+    seatsAvailable: 22,
+  },
+  {
+    id: 6,
+    name: "APIs REST com Express",
+    startDate: "05/04/2026",
+    duration: "28 horas",
+    price: 420,
+    description: "Crie APIs RESTful seguras com autenticação e boas práticas.",
+    workload: "28h",
+    instructor: "Fernanda Rocha",
+    level: "Intermediário",
+    seatsAvailable: 20,
+  },
+  {
+    id: 7,
+    name: "Git e GitHub na Prática",
+    startDate: "10/04/2026",
+    duration: "15 horas",
+    price: 200,
+    description:
+      "Controle de versão, branches, pull requests e fluxo de trabalho em equipe.",
+    workload: "15h",
+    instructor: "Lucas Martins",
+    level: "Iniciante",
+    seatsAvailable: 35,
+  },
+  {
+    id: 8,
+    name: "Desenvolvimento Web Full Stack",
+    startDate: "20/04/2026",
+    duration: "60 horas",
+    price: 900,
+    description:
+      "Projeto completo com front-end, back-end, banco de dados e deploy.",
+    workload: "60h",
+    instructor: "Patrícia Gomes",
+    level: "Avançado",
+    seatsAvailable: 15,
+  }
+];

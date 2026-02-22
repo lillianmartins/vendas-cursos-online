@@ -1,137 +1,163 @@
 :root {
-    --purple-dark:    #512396;    
-    --purple-main:    #7c3aed;     
-    --purple-light:   #a78bfa;
-    --purple-lighter: #ede9fe;
-    --gray-dark:      #1f2937;
-    --gray-light:     #f3f4f6;
-    --golden:         #FFC312;
+  --purple-dark: #512396;
+  --purple-main: #7c3aed;
+  --purple-light: #a78bfa;
+  --gray-dark: #1f2937;
+  --gray-light: #f3f4f6;
+  --golden: #ffc312;
 }
 
 body {
-    background-color: var(--gray-light);
-    color: var(--gray-dark);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    margin: 0;
+  background-color: var(--gray-light);
+  color: var(--gray-dark);
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  margin: 0;
 }
 
 .navbar {
-    background-color: var(--purple-dark) !important;
-    padding: 0.9rem 1.25rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-    border-bottom: 1px solid rgba(124, 58, 237, 0.3);
+  background-color: var(--purple-dark) !important;
+  padding: 0.9rem 1.25rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(124, 58, 237, 0.3);
 }
 
 .navbar-brand {
-    color: white !important;
-    font-size: 1.45rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    transition: color 0.25s ease;
-}
-
-.navbar-brand:hover {
-    color: var(--purple-light) !important;
+  color: white !important;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
 .navbar-toggler {
-    border: none;
-    padding: 0.25rem;
+  border: none;
+  padding: 0.25rem;
 }
 
 .navbar-toggler-icon {
-    filter: brightness(0) invert(1); 
+  filter: brightness(0) invert(1);
 }
 
 .navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 0.92) !important;
-    font-weight: 500;
-    padding: 0.6rem 1rem !important;
-    border-radius: 8px;
-    transition: all 0.22s ease;
-    background: transparent;
+  color: rgba(255, 255, 255, 0.92) !important;
+  font-weight: 500;
+  padding: 0.6rem 1rem !important;
+  border-radius: 8px;
+  transition: all 0.22s ease;
+  background: transparent;
 }
 
 .navbar-nav .nav-link:hover {
-    color: white !important;
-    background: rgba(255,255,255,0.06);
+  color: white !important;
+  background: rgba(255, 255, 255, 0.06);
 }
 
-.navbar .search-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    max-width: 480px;
-    margin: 0 auto;
+.btn {
+  color: black;
+  background-color: var(--golden);
+  width: 100px;
 }
 
-.btn{
-color: black;
-background-color: var(--golden);
-width: 100px;
+.btn:hover,
+.btn:active {
+  color: black;
+  background-color: white;
 }
 
-.btn:hover{
-color: black;
-background-color: white;
+.course-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  border: 1px solid rgba(124, 58, 237, 0.12);
+}
+
+.course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+.course-card .card-body {
+  padding: 1.5rem;
+}
+
+.course-card .card-title {
+  color: var(--purple-main);
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 1.1rem;
+  line-height: 1.3;
+}
+
+.course-card .card-text {
+  color: #4b5563;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.course-card .card-text strong {
+  color: var(--purple-dark);
+}
+
+.details-btn {
+  background-color: var(--purple-main);
+  color: white;
+  border: none;
+  font-weight: 600;
+  padding: 0.75rem;
+  border-radius: 8px;
+  transition: all 0.22s ease;
+}
+
+.details-btn:hover {
+  background-color: var(--purple-light);
+  color: var(--purple-dark);
+  transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
 
-    .navbar-brand {
-        font-size: 1.3rem;
-    }
+  .navbar-collapse {
+    background: var(--purple-dark);
+    margin: 0.6rem -1rem -0.6rem -1rem;
+    padding: 1rem 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
 
-    .navbar-collapse {
-        background: var(--purple-dark);
-        margin: 0.6rem -1rem -0.6rem -1rem;
-        padding: 1rem 1.5rem;
-        border-top: 1px solid rgba(255,255,255,0.08);
-    }
+  .navbar-nav {
+    margin-bottom: 1rem;
+  }
 
-    .navbar-nav {
-        margin-bottom: 1rem;
-    }
+  .nav-item {
+    margin: 0.4rem 0;
+  }
 
-    .nav-item {
-        margin: 0.4rem 0;
-    }
+  .search-container {
+    justify-content: stretch;
+    margin: 1rem 0;
+  }
 
-    .search-container {
-        justify-content: stretch;
-        margin: 1rem 0;
-    }
+  .course-card {
+    margin-bottom: 1.5rem;
+  }
 
-    .search-form {
-        max-width: 100%;
-        flex-direction: column;         
-        border-radius: 12px;
-        background: rgba(255,255,255,0.08);
-        border: none;
-    }
+  .course-card .card-title {
+    font-size: 1.18rem;
+  }
 
-    .search-form input[type="search"] {
-        border-radius: 12px 12px 0 0;
-        padding: 0.75rem 1.2rem;
-        background: rgba(0,0,0,0.15);
-    }
-
-    .search-form .btn {
-        border-radius: 0 0 12px 12px;
-        padding: 0.75rem;
-        font-size: 1rem;
-    }
-
-    .logout-link {
-        display: block;
-        text-align: center;
-        padding: 0.8rem !important;
-        margin-top: 0.8rem;
-        border-radius: 8px;
-        background: rgba(255,255,255,0.06);
-    }
-
-    .logout-link:hover {
-        background: rgba(239,68,68,0.25);
-    }
+  .details-btn {
+    padding: 0.8rem;
+  }
 }
